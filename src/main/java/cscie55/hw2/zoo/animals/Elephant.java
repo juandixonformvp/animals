@@ -15,7 +15,7 @@ public class Elephant {
     public enum Diet { VEGGIE, MEAT, OMNI };
     Diet diet;
     
-/**Takes no arguments and initializes the name,age,gender,foods,diet to generic starting values.
+/**Takes no arguments and initializes the name,age,gender,foods,diet to general starting values.
  * 
  */
     public Elephant(){
@@ -32,8 +32,8 @@ public class Elephant {
         return getClass().getName()+"[name="+this.name+",age="+this.age+",gender="+this.gender+",favfood="+this.favoriteFoods.get(0)+",diet="+this.diet+"]";
     }
 
-/**Uses toString to test the class.
- * 
+/**Returns a String that takes the favoriteFoods data from
+ * Assignment 1 and displays it as proof that it is eating well.
  */    
 
     public String eat(){
@@ -46,11 +46,22 @@ public class Elephant {
         return eating.toString();
     }
 
+    public String speak(){
+        StringBuilder speaking = new StringBuilder("Trumpet!");
+        return speaking.toString();
+    }
+
+    public String play(){
+        StringBuilder playing = new StringBuilder("Elephant Ecstasy!");
+        return playing.toString();
+    }
 
     public static void main(String[] argv){
-        System.out.println("");
         Elephant elephant_1 = new Elephant();
+        System.out.println("");
         System.out.println(elephant_1.eat());
+        System.out.println(elephant_1.speak());
+        System.out.println(elephant_1.play());
     }
 
 
