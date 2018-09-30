@@ -1,4 +1,4 @@
-package cscie55.zoo.animals;
+package main.java.cscie55.hw2.zoo.animals;
 
 /************************************************************ 
 * HW 1, Part II - Create 5 classes in package cscie55.zoo.animals.
@@ -23,6 +23,8 @@ public class Elephant {
         this.age = 0;
         this.gender = true;
         this.favoriteFoods.add("water");
+        this.favoriteFoods.add("peanuts");
+        this.favoriteFoods.add("carrots");
         this.diet = Diet.VEGGIE;
     }
 
@@ -33,11 +35,22 @@ public class Elephant {
 /**Uses toString to test the class.
  * 
  */    
+
+    public String eat(){
+        StringBuilder eating = new StringBuilder();
+        eating.append("Delightfully tasty ");
+        for(int i = 0; i < favoriteFoods.size(); i++) {
+            eating.append(favoriteFoods.get(i));
+            eating.append(i < favoriteFoods.size() - 1 ? ", " : ".");
+        }
+        return eating.toString();
+    }
+
+
     public static void main(String[] argv){
         System.out.println("");
-		System.out.println("");
         Elephant elephant_1 = new Elephant();
-        System.out.println(elephant_1.toString());
+        System.out.println(elephant_1.eat());
     }
 
 
