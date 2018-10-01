@@ -10,18 +10,18 @@ public class Elephant {
     
     private String name;
     private int age;
-    private boolean gender;
+    private boolean male;
     ArrayList<String> favoriteFoods = new ArrayList<String>();
     public enum Diet { VEGGIE, MEAT, OMNI };
     Diet diet;
     
-/**Takes no arguments and initializes the name,age,gender,foods,diet to general starting values.
+/**Takes no arguments and initializes the name,age,male,foods,diet to general starting values.
  * 
  */
     public Elephant(){
         this.name = "elephant";
         this.age = 0;
-        this.gender = true;
+        this.male = true;
         this.favoriteFoods.add("water");
         this.favoriteFoods.add("peanuts");
         this.favoriteFoods.add("carrots");
@@ -29,13 +29,12 @@ public class Elephant {
     }
 
     public String toString(){
-        return getClass().getName()+"[name="+this.name+",age="+this.age+",gender="+this.gender+",favfood="+this.favoriteFoods.get(0)+",diet="+this.diet+"]";
+        return getClass().getName()+"[name="+this.name+",age="+this.age+",male="+this.male+",favfood="+this.favoriteFoods.get(0)+",diet="+this.diet+"]";
     }
 
 /**Returns a String that takes the favoriteFoods data from
  * Assignment 1 and displays it as proof that it is eating well.
  */    
-
     public String eat(){
         StringBuilder eating = new StringBuilder();
         eating.append("Delightfully tasty ");
@@ -46,11 +45,15 @@ public class Elephant {
         return eating.toString();
     }
 
+/**Return a String indicating what sound the animal makes.
+ */ 
     public String speak(){
         StringBuilder speaking = new StringBuilder("Trumpet!");
         return speaking.toString();
     }
 
+/**Return a String indicating what sound the animal makes while playing.
+ */  
     public String play(){
         StringBuilder playing = new StringBuilder("Elephant Ecstasy!");
         return playing.toString();
